@@ -1,0 +1,186 @@
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$icon-gray: #7e7e7e;
+$btn-gradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+.icon-gray {
+    color: $icon-gray;
+}
+
+.icon-primary {
+    color: $primary-color;
+}
+
+a {
+    cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+.footer-txt {
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-txt:hover {
+  color: transparent; 
+  background-image: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text; 
+  background-clip: text;
+}
+
+// Filled hearts
+
+@mixin favorite-selected {
+    cursor: pointer;
+    background: $btn-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+
+
+// Loading spinner
+
+  .spinner-container {
+    background-color: white;
+    z-index: 666;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: 0.2s linear 1s spinner-container;
+    animation-fill-mode: forwards; 
+  }
+  
+  @keyframes spinner-container {
+    from {
+      opacity: 100%;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }
+    
+    }
+    .spinner  {
+      height: 120px;
+      width: 120px;
+      border: 6px solid;
+      border-color: rgb(56, 152, 231) transparent rgb(56, 152, 231) transparent;
+      border-radius: 50%;
+      animation: spin 1.3s linear infinite;
+
+    }
+    
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+ 
+// Reset all styles for the input element
+input {
+    box-sizing: content-box;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: initial;
+    font-size: medium;
+    font-weight: normal;
+    background-color: transparent;
+    color: inherit;
+    text-align: left;
+    box-shadow: none;
+    outline: none;
+  }
+
+// FadeIn animation for Menus
+
+  @keyframes FadeIn {
+    0% {
+      transform: scale(0)
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .entrees {
+    animation: FadeIn 1.2s;
+    animation-delay: 1.6s;
+    transform: scale(0);
+    animation-fill-mode: forwards;
+  };
+
+  .plats {
+  animation: FadeIn 1.2s;
+  animation-delay: 2s;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+  }
+
+  .desserts {
+    animation: FadeIn 1.2s;
+    animation-delay: 2.4s;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+  }
+  
+  .favorite-selected { 
+    @include favorite-selected;
+    animation: fav 1s 1;
+    }
+    
+    @keyframes fav {
+      0% {
+        transform: scale(1);
+      }
+      10% {
+        transform: scale(1.25);
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+      }
+      20% {
+        transform: scale(1.5);
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+      }
+      30% {
+        transform: scale(1.4);
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+      }
+      40% {
+        transform: scale(1.5);
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+      }
+      50% {
+        transform: scale(1.4);
+      }
+      60% {
+        transform: scale(1.5);
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+      }
+      70% {
+        transform: scale(1.4);
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+      }
+      80% {
+        transform: scale(1.5);
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+      }
+      90% {
+        transform: scale(1.25);
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+      }
+      100% {
+        transform: scale(1.0);
+      }
+    }

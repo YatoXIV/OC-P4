@@ -107,22 +107,22 @@
   }
   
   /* Initial styles for the unfilled-heart */
-  input[type="checkbox"]:not(:checked) ~ .favorite-restaurants .unfilled-heart {
+  input[type="checkbox"]:not(:checked)  ~ .favorite-restaurants .unfilled-heart {
     display: block;
   }
   
   /* Initial styles for the filled-heart */
-  input[type="checkbox"]:not(:checked) ~ .favorite-restaurants .filled-heart {
+  input[type="checkbox"]:not(:checked)  ~ .favorite-restaurants .filled-heart {
     display: none;
   }
   
   /* Styles when the checkbox is checked */
-  input[type="checkbox"]:checked ~ .favorite-restaurants .unfilled-heart {
+  input[type="checkbox"]:checked  ~ .favorite-restaurants .unfilled-heart {
     display: none;
   }
   
   /* Styles when the checkbox is checked */
-  input[type="checkbox"]:checked ~ .favorite-restaurants .filled-heart {
+  input[type="checkbox"]:checked  ~ .favorite-restaurants .filled-heart {
     display: block;
   }
   

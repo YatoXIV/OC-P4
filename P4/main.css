@@ -64,7 +64,7 @@ label {
   height: 120px;
   width: 120px;
   border: 6px solid;
-  border-color: rgb(56, 152, 231) transparent rgb(56, 152, 231) transparent;
+  border-color: #FF79DA transparent #99e2d0 transparent;
   border-radius: 50%;
   animation: spin 1.3s linear infinite;
 }

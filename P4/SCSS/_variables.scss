@@ -29,7 +29,7 @@ label {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  animation: 0.2s linear 1s spinner-container;
+  animation: 0.2s linear 1.3s spinner-container;
   animation-fill-mode: forwards;
 }
 
@@ -44,20 +44,39 @@ label {
   }
 }
 
-.spinner {
-  height: 120px;
-  width: 120px;
-  border: 6px solid;
-  border-color: #FF79DA transparent #99e2d0 transparent;
-  border-radius: 50%;
-  animation: spin 1.3s linear infinite;
-}
+.loader {
+  width: 200px;
+  height: 200px;
+  animation: rotate 6s linear infinite;
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+  .loader-path {
+    stroke-linecap: round;
+    transform-origin: center;
+    animation: color-change 1.5s ease-in-out infinite;
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes color-change {
+    0% {
+      stroke: #99E2D0;
+      stroke-dasharray: 20, 100;
+    }
+    50% {
+      stroke: #9356DC;
+      stroke-dasharray: 80, 100;
+    }
+    100% {
+      stroke: #FF79DA;
+      stroke-dasharray: 130, 100;
+    }
   }
 }
+
 
 input {
   box-sizing: content-box;
@@ -111,59 +130,4 @@ input {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: fav 1s 1;
-}
-
-@keyframes fav {
-  0% {
-      transform: scale(0);
-  }
-
-  10% {
-      transform: scale(0.25);
-      animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-  }
-
-  20% {
-      transform: scale(0.5);
-      animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-  }
-
-  30% {
-      transform: scale(0.75);
-      animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-  }
-
-  40% {
-      transform: scale(1);
-      animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-  }
-
-  50% {
-      transform: scale(1.2);
-  }
-
-  60% {
-      transform: scale(1.5);
-      animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-  }
-
-  70% {
-      transform: scale(1.4);
-      animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-  }
-
-  80% {
-      transform: scale(1.5);
-      animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-  }
-
-  90% {
-      transform: scale(1.25);
-      animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-  }
-
-  100% {
-      transform: scale(1);
-  }
 }

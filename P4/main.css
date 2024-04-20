@@ -80,6 +80,36 @@ a {
   cursor: pointer;
 }
 
+.icon-gray {
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.icon-gray i {
+  margin: 0px 15px;
+}
+
+.fa-store {
+  color: #9356DC;
+}
+
+.fa-list-ul {
+  color: gray;
+}
+
+.fa-mobile-screen-button {
+  color: gray;
+}
+
+.icon-gray:hover {
+  color: #9356dc;
+}
+
+.icon-primary {
+  color: #9356dc;
+}
+
 .header-location {
   background-color: #eaeaea;
   color: #353535;
@@ -261,6 +291,8 @@ figcaption {
 
 .header-location input {
   width: 109px;
+  font-family: Roboto;
+  color: black;
 }
 
 .search {

@@ -119,8 +119,7 @@ input[type=checkbox]:not(:checked)~.favorite-restaurants .filled-heart {
 
 /* Styles when the checkbox is checked */
 input[type=checkbox]:checked~.favorite-restaurants .unfilled-heart {
-  display: flex;
-  position: absolute;
+  display: none;
 }
 
 /* Styles when the checkbox is checked */

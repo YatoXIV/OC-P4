@@ -1,10 +1,22 @@
 .icon-gray {
-  color: #7e7e7e;
+  color: black;
   display: flex;
   align-items: center;
 }
 .icon-gray i {
   margin: 0px 15px;
+}
+
+.fa-store {
+  color: #9356DC;
+}
+
+.fa-list-ul {
+  color: gray;
+}
+
+.fa-mobile-screen-button {
+  color: gray;
 }
 
 .icon-gray:hover {
@@ -14,7 +26,6 @@
 .icon-primary {
   color: #9356dc;
 }
-
 
 a {
   cursor: pointer;

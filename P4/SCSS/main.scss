@@ -1,5 +1,5 @@
 // Import core styles
-@import '../SCSS/variables';
-@import '../SCSS/base-style';
-@import '../SCSS/main-layout';
-@import '../SCSS/page-restaurant';
+@import '_base-style.scss';
+@import '_main-layout.scss';
+@import '_page-restaurant.scss';
+@import '_variables.scss';

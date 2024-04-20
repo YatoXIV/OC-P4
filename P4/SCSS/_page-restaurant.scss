@@ -167,6 +167,7 @@ input[type=checkbox]:checked~.favorite-restaurants .filled-heart {
   white-space: nowrap;
   width: 100%;
   transition: 0.3s all ease;
+  overflow: hidden;
 }
 
 .menu-restaurant-item:hover {
@@ -185,6 +186,8 @@ input[type=checkbox]:checked~.favorite-restaurants .filled-heart {
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
+  background: white;
+  border-radius: 15px;
 }
 
 .menu-restaurant-item-price {

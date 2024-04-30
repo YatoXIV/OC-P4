@@ -756,24 +756,27 @@ figcaption {
   cursor: pointer;
 }
 
-/* Initial styles for the unfilled-heart */
-input[type=checkbox]:not(:checked) ~ .favorite-restaurants .unfilled-heart {
-  display: block;
-}
-
 /* Initial styles for the filled-heart */
 input[type=checkbox]:not(:checked) ~ .favorite-restaurants .filled-heart {
   display: none;
 }
 
 /* Styles when the checkbox is checked */
-input[type=checkbox]:checked ~ .favorite-restaurants .unfilled-heart {
-  display: none;
+input[type=checkbox]:checked ~ .favorite-restaurants .filled-heart {
+  display: flex;
+  margin-top: -22px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Initial styles for the unfilled-heart */
+input[type=checkbox]:not(:checked) ~ .favorite-restaurants .unfilled-heart {
+  display: flex;
 }
 
 /* Styles when the checkbox is checked */
-input[type=checkbox]:checked ~ .favorite-restaurants .filled-heart {
-  display: block;
+input[type=checkbox]:checked ~ .favorite-restaurants .unfilled-heart {
+  display: flex;
 }
 
 .menu-section {
@@ -836,7 +839,6 @@ input[type=checkbox]:checked ~ .favorite-restaurants .filled-heart {
   text-overflow: ellipsis;
   cursor: pointer;
   background: white;
-  border-radius: 15px;
 }
 
 .menu-restaurant-item-price {
@@ -1268,7 +1270,7 @@ input {
     animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 }
 

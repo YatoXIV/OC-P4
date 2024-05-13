@@ -110,25 +110,31 @@
 
 /* Initial styles for the filled-heart */
 input[type=checkbox]:not(:checked)~.favorite-restaurants .filled-heart {
-  display: none;
+  opacity: 0;
+  display: flex;
+  z-index: 1;
+  position: relative;
+  animation: notfav 1s;
 }
 
 /* Styles when the checkbox is checked */
 input[type=checkbox]:checked~.favorite-restaurants .filled-heart {
   display: flex;
-  margin-top: -22px;
   z-index: 1;
   position: relative;
+  animation: fav 1s;
 }
 
 /* Initial styles for the unfilled-heart */
 input[type=checkbox]:not(:checked)~.favorite-restaurants .unfilled-heart {
   display: flex;
+  position: absolute;
 }
 
 /* Styles when the checkbox is checked */
 input[type=checkbox]:checked~.favorite-restaurants .unfilled-heart {
   display: flex;
+  position: absolute;
 }
 
 
